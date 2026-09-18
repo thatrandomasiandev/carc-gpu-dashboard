@@ -1,8 +1,11 @@
 #!/usr/bin/env python3
-"""CARC / Slurm GPU queue dashboard (stdlib only).
+"""CARC / Slurm GPU queue dashboard (stdlib only) — live by default.
 
-Requires: USC VPN + working SSH to your Discovery host alias.
-Demo mode (no cluster):  CARC_DASH_DEMO=1 python3 server.py
+Same behavior as the lab dashboard: SSH to Discovery, poll sinfo/squeue/sacct/sprio.
+Requires USC VPN + working `ssh discovery` (or CARC_SSH_HOST).
+
+  python3 server.py          # live
+  python3 server.py --demo   # optional offline UI smoke test only
 
 Open http://127.0.0.1:8767
 """
